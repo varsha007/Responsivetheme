@@ -27,11 +27,11 @@ body {
         url('fonts/Museo700-Regular-webfont..eot'), /* IE9 */
         url('fonts/Museo700-Regular-webfont.woff');
 }	
-.body {
+.wrap {
 	clear: both; 
 	margin: 0 auto; 
-	width: 70%;
-	font-family: myfont;
+	max-width: 970px;
+	
 	
 }
 	
@@ -63,15 +63,14 @@ a img {
 }
 
 a:link, a:visited {
-	color: orange;
-	font-style: italic;
+	color: #000;
 	padding: 0 1px;
 	text-decoration: none;
 }
 
 a:hover, a:active {
 	
-	color: #659;
+	color: orange;
 	text-decoration: none;
 }
 
@@ -82,34 +81,21 @@ img{
 /* ===========================
    ===== Main Navigation ===== 
    =========================== */
- .mainHeader{
- 	background: url('img/bg1.jpg') no-repeat center ; 
-    -webkit-background-size: cover;
-	 -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    height: 37em;
-    margin-bottom: 2%; 
-
- }
 
 .mainHeader nav {
 	font-size: 1.143em;
 	height: 2.5em;
 	letter-spacing: 1px;
-	font-style: italic;
 	line-height: 30px;
 	margin: 0 auto;
-	text-align: center;
-	border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
+	text-align: left;
 	position: fixed;
 	background: rgba(0,0,0,0.8);
-	font-family: "sans-serif";
+	font-family: "Verdana", sans-serif;
 	-moz-box-shadow: 1px 1px 2px rgb(0,0,0);
 	-webkit-box-shadow: 1px 1px 2px rgb(0,0,0);
 	box-shadow: 1px 1px 2px rgb(0,0,0);
+	width: 100%;
 }
 	
 .mainHeader nav ul {
@@ -128,8 +114,7 @@ img{
 	padding: 5px 23px;
 	text-decoration: none;
 }
-.mainHeader nav a:hover, .mainHeader nav a:active,
-.mainHeader nav .active a:link, .mainHeader nav .active a:visited {
+.mainHeader nav a:hover, .mainHeader nav a:active {
 	font-weight: normal;
 	color: orange;
 	text-shadow: none !important;
@@ -205,21 +190,20 @@ img{
 .mainFooter {
 	width: 100%;
 	float: left;
-	margin-bottom: 2%;
 	padding-left: 0;
 	background-color: #252528;
-	border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;	
-	color: #fff;	
+	color: #383c3c;	
 	text-align: center;
 	letter-spacing: 1px;
 }
 
 .mainFooter p {
 	width: 91%;
-	margin: 2% auto;
 }
+
+.mainFooter a { color: #383c3c;}
+
+.mainFooter p:hover, .mainFooter a:hover { color: orange;}
 
 /* ===========================
    ====== Media Queries ====== 
@@ -230,7 +214,7 @@ img{
 	.body {
 		clear: both; 
 		margin: 0 auto; 
-		width: 90%;
+		width: 100%;
 		font-size: 90%;
 	}
 	
@@ -241,7 +225,8 @@ img{
 	.mainHeader nav {
 	    height: 10em;
 		line-height: 30px;
-		width: 90%;
+		width: 100%;
+		text-align: center;
 	}
 		
 	.mainHeader nav ul {
@@ -298,17 +283,16 @@ img{
 	.mainFooter {
 		width: 100%;
 		float: left;
-		margin: 2% 0;
 		padding-left: 0;
 		background: #252528;
 		border-radius: 5px;
 		-moz-border-radius: 5px;
 		-webkit-border-radius: 5px;	
-		color: orange;	
+			
 	}
 	
 	.mainFooter p {
 		width: 86%;
-		margin: 2% auto;
 	}
+
 }
