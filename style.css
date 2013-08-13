@@ -83,33 +83,14 @@ you can use the generic selector below, but it's slower:
 .icon-users:before {
 	content: "\63";
 }
-.icon-twitter:before {
-	content: "\64";
-}
-.icon-facebook:before {
-	content: "\66";
-}
 .icon-tumblr:before {
 	content: "\74";
 }
-.icon-yahoo:before {
-	content: "\67";
-}
-.icon-github:before {
-	content: "\79";
-}
-.icon-pinterest:before {
-	content: "\70";
-}
-.icon-skype:before {
-	content: "\73";
-}
-.icon-google-plus:before {
-	content: "\65";
-}
+
 .icon-mail:before {
 	content: "\6d";
 }
+
 	
 /* ===========================
    ========= Headings ======== 
@@ -261,22 +242,68 @@ img{
 }
 
 /* ===========================
+   ========= Contact ========== 
+   =========================== */
+
+ .login-block {
+    float:left;
+    margin:0 49px 25px 0;
+    text-align:center;
+    width:300px;
+    border-color:#d09e6d;
+}
+
+.login-block form {
+     text-align: right;
+    -moz-box-shadow:0 0 10px #333333;
+    -webkit-box-shadow:0 0 10px #333333;
+    box-shadow:0 0 10px #333333;
+    padding:20px;
+}
+
+
+/* ===========================
    ========= Footer ========== 
    =========================== */
 
 .mainFooter {
 	width: 100%;
 	float: left;
-	padding-left: 0;
+	padding: 2%;
 	background-color: #252528;
 	color: #383c3c;	
 	text-align: center;
 	letter-spacing: 1px;
 }
 
-.mainFooter p {
-	width: 91%;
+.mainFooter p {	float: left; }
+
+.mainFooter input[type="text"], textarea {
+	border: none;
+	background-color: #1f1f21;
+	padding: 8px 20px;
+	border-radius: 3px;
+	color: #555;
+	width: 80%;
+	-webkit-transition: background-color .2s linear;
+	-moz-transition: background-color .2s linear;
+	transition: background-color .2s linear;
+	margin-bottom: 1em;
 }
+
+input[type="submit"] {
+	background-color: #3e3e40;
+	border: none;
+	color: #fff;
+	border-radius: 4px;
+	padding: 5px 20px;
+	font-weight: bold;
+	-webkit-transition: background-color .2s linear;
+	-moz-transition: background-color .2s linear;
+}
+
+.button:hover { background: blue}
+.mainFooter .login-block{ float: right;}
 
 .mainFooter a { color: #383c3c;}
 

@@ -19,7 +19,7 @@
 					<li><a href="index.html"><span aria-hidden="true" data-icon="h"></span>Home</a></li>
 					<li><a href="http://www.google.com"  class="icon" data-icon="b">Projects</a></li>
 					<li><a href="#"  class="icon" data-icon="c" >About Us</a></li>
-					<li><a href="#"><span aria-hidden="true" data-icon="m"></span>Contact</a></li>
+					<li><a href="#contact"><span aria-hidden="true" data-icon="m"></span>Contact</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -88,8 +88,27 @@
 		</div>
 	</div>	  
 	<footer class="mainFooter">
-		<p>Copyright &copy; 2013 <a href="http://navshainc.com">Navsha Computing Inc</a></p>
+		<div class="wrap">
+			<p>Copyright &copy; 2013 <a href="http://navshainc.com">Navsha Computing Inc</a></p>
+			<div class="login-block" id="contact">
+			    <h3>Contact</h3>
+			    <form action="#" method="post" target="_blank">
+		          <input type="text" name="ftp-name" id="ftp-name" placeholder="Your name"/>
+		          <input type="text" name="ftp-email" id="ftp-email" placeholder="Your email" />
+		          <textarea rows="3"  name="ftp-message" id="ftp-message" placeholder="Message"></textarea>
+		          <input type="submit" class="button" value="Send" />
+			    </form>
+			</div>
+		</div>	
 	</footer>
-
+//   <script type="text/javascript">
+//    $(function() {
+//     var $forms = $("form");
+//     $forms.focusin(function() {
+//         $forms.removeClass("active-form");
+//         $(this).addClass("active-form");
+//     });
+// });
+//   </script>
 </body>
 </html>
