@@ -34,8 +34,12 @@ body {
 	max-width: 970px;	
 }
 
+/* ===========================
+   ========= Icons Font ====== 
+   =========================== */
+
 @font-face {
-	font-family: 'icon';
+	font-family: 'icomoon';
 	src:url('fonts/icomoon.eot');
 	src:url('fonts/icomoon.eot?#iefix') format('embedded-opentype'),
 		url('fonts/icomoon.woff') format('woff'),
@@ -47,15 +51,15 @@ body {
 
 /* Use the following CSS code if you want to use data attributes for inserting your icons */
 [data-icon]:before {
-	font-family: 'icon';
+	font-family: 'icomoon';
 	content: attr(data-icon);
 	speak: none;
+	margin-right: 4px;
 	font-weight: normal;
 	font-variant: normal;
 	text-transform: none;
 	line-height: 1;
 	-webkit-font-smoothing: antialiased;
-	margin-right: 2px;
 }
 
 /* Use the following CSS code if you want to have a class per icon */
@@ -64,7 +68,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-.icon-home, .icon-file, .icon-users, .icon-twitter, .icon-facebook, .icon-tumblr, .icon-yahoo, .icon-github, .icon-pinterest, .icon-skype, .icon-google-plus, .icon-mail {
+ .icon-folder, .icon-envelope, .icon-users, .icon-home {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -74,22 +78,19 @@ you can use the generic selector below, but it's slower:
 	line-height: 1;
 	-webkit-font-smoothing: antialiased;
 }
-.icon-home:before {
-	content: "\68";
+.icon-folder:before {
+	content: "\65";
 }
-.icon-file:before {
-	content: "\62";
+.icon-mail:before {
+	content: "\7a";
 }
 .icon-users:before {
 	content: "\63";
 }
-.icon-tumblr:before {
-	content: "\74";
+.icon-home:before {
+	content: "\68";
 }
 
-.icon-mail:before {
-	content: "\6d";
-}
 
 	
 /* ===========================
@@ -120,35 +121,33 @@ a img {
 }
 
 a:link, a:visited {
-	color: #000;
 	padding: 0 1px;
 	text-decoration: none;
+	color: #000;
 }
 
-a:hover, a:active {
-	
-	color: orange;
+a:hover, a:active {	
+	color: #0098c3;
 	text-decoration: none;
 }
 
 img{
 	max-width: 100%;
 }
-
+li{ list-style-type: none;}
 /* ===========================
    ===== Main Navigation ===== 
    =========================== */
 
 .mainHeader {
-	height: auto;
 	position: fixed;
-	background: rgba(0,0,0,0.8);
+	background: url('img/bg-dark.png');
 	font-family: "Verdana", sans-serif;
 	-moz-box-shadow: 1px 1px 2px rgb(0,0,0);
 	-webkit-box-shadow: 1px 1px 2px rgb(0,0,0);
 	box-shadow: 1px 1px 2px rgb(0,0,0);
 	width: 100%;
-	color: #ebeded;
+	color: #f3f3f3;
 	padding: 1%;
 }
 	
@@ -158,8 +157,8 @@ img{
 	line-height: 1.3em;
     float: right;
 	text-align: left;
-	width: 34em;
-}	
+}
+	
 .mainHeader nav ul {
 	list-style: none; 
 	margin: 0 auto;
@@ -170,14 +169,14 @@ img{
 }
 	
 .mainHeader nav a:link, .mainHeader nav a:visited {
-	color: #ebeded;
+	color: #f3f3f3;
 	display: inline-block;
 	padding: 5px 20px;
 	text-decoration: none;
 }
 .mainHeader nav a:hover, .mainHeader nav a:active {
 	font-weight: normal;
-	color: orange;
+	color: #0098c3;
 	text-shadow: none !important;
 }
 	
@@ -216,6 +215,7 @@ img{
 	-webkit-border-radius: 5px;	
 	padding: 3% 5%;	
 	margin-bottom: 3%;
+	text-align: justify;
 }
 
 .post-info {
@@ -246,39 +246,27 @@ img{
    =========================== */
 
  .login-block {
-    float:left;
-    margin:0 49px 25px 0;
-    text-align:center;
-    width:300px;
     border-color:#d09e6d;
+    width: 24%;
+	float: left;
+	margin-left: 2%;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;	
+	 -moz-box-shadow:0 0 10px #333333;
+    -webkit-box-shadow:0 0 10px #333333;
+    box-shadow:0 0 10px #333333;
+	background-color: #ebeded;	
+	padding: 2% 3%;
+	margin-bottom: 3%;
 }
 
 .login-block form {
      text-align: right;
-    -moz-box-shadow:0 0 10px #333333;
-    -webkit-box-shadow:0 0 10px #333333;
-    box-shadow:0 0 10px #333333;
     padding:20px;
 }
 
-
-/* ===========================
-   ========= Footer ========== 
-   =========================== */
-
-.mainFooter {
-	width: 100%;
-	float: left;
-	padding: 2%;
-	background-color: #252528;
-	color: #383c3c;	
-	text-align: center;
-	letter-spacing: 1px;
-}
-
-.mainFooter p {	float: left; }
-
-.mainFooter input[type="text"], textarea {
+input[type="text"], textarea {
 	border: none;
 	background-color: #1f1f21;
 	padding: 8px 20px;
@@ -291,6 +279,10 @@ img{
 	margin-bottom: 1em;
 }
 
+input[type='text']:hover, textarea:hover{
+	background: #1a171b; 
+} 
+
 input[type="submit"] {
 	background-color: #3e3e40;
 	border: none;
@@ -302,12 +294,31 @@ input[type="submit"] {
 	-moz-transition: background-color .2s linear;
 }
 
-.button:hover { background: blue}
-.mainFooter .login-block{ float: right;}
+.button:hover { background: #0098c3}
+
+
+
+/* ===========================
+   ========= Footer ========== 
+   =========================== */
+
+.mainFooter {
+	width: 100%;
+	float: left;
+	background-color: #252528;
+	color: #383c3c;	
+	text-align: center;
+	letter-spacing: 1px;
+}
+
+.mainFooter ul{ width: 25%; margin: 0 auto;}
+.mainFooter li { float: left; margin-right: 6%;	}
+.mainFooter img { margin: 0;}
 
 .mainFooter a { color: #383c3c;}
 
-.mainFooter p:hover, .mainFooter a:hover { color: orange;}
+.mainFooter p:hover, .mainFooter a:hover { color: #0098c3;}
+
 
 /* ===========================
    ====== Media Queries ====== 
@@ -343,7 +354,7 @@ input[type="submit"] {
 
 	.content {
 		width: 100%;
-		float: none;	
+		float: none;
 	}	
 
 	.post-info {
@@ -357,6 +368,17 @@ input[type="submit"] {
 		margin-left: 0;
 		padding: 1% 7%;
 		margin-bottom: 0;		
+	}
+
+	.login-block {
+		width: 86%;
+		float: none;
+		margin-top: 4%;
+	}
+
+	.login-block form {
+     text-align: center;
+     width: 75%;
 	}
 	
 	.top-sidebar p { width: 90%; }

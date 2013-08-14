@@ -4,8 +4,9 @@
 <head>
 	<title>Responsive Home Page</title>
 	<meta charset="utf-8" />
-	<link rel="stylesheet" href="style.css" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<script src="jquery.js"></script>
 
 </head>
 
@@ -17,9 +18,9 @@
         	<nav>
         		<ul>
 					<li><a href="index.html"><span aria-hidden="true" data-icon="h"></span>Home</a></li>
-					<li><a href="http://www.google.com"  class="icon" data-icon="b">Projects</a></li>
-					<li><a href="#"  class="icon" data-icon="c" >About Us</a></li>
-					<li><a href="#contact"><span aria-hidden="true" data-icon="m"></span>Contact</a></li>
+					<li><a href="http://www.google.com"><span aria-hidden="true" data-icon="e"></span>Projects</a></li>
+					<li><a href="#"><span aria-hidden="true" data-icon="c"></span>About Us</a></li>
+					<li><a href="#contact"><span aria-hidden="true" data-icon="a"></span>Contact</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -42,8 +43,7 @@
 					</footer>
 					
 					<content>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-						
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>		
 					</content>
 					
 				</article>
@@ -60,8 +60,9 @@
 					<content>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-					</content>
-				
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+
+					</content>		
 				</article>
 			</div>
 				
@@ -79,36 +80,40 @@
 			    </article>
 			</aside>				
 
-			<aside class="top-sidebar">
-				<article>
-				<h2>Bottom Sidebar</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod expedita distinctio.</p>
+			<aside class="login-block">
+				<article id="contact">
+				    <h3>Contact</h3>
+				    <form action="#" method="post" target="_blank">
+			          <input type="text" name="ftp-name" id="ftp-name" placeholder="Your name"/>
+			          <input type="text" name="ftp-email" id="ftp-email" placeholder="Your email" />
+			          <textarea rows="3"  name="ftp-message" id="ftp-message" placeholder="Message"></textarea>
+			          <input type="submit" class="button" value="Send" />
+				    </form>
 			    </article>
 			</aside>	
 		</div>
-	</div>	  
+	</div>	
+
 	<footer class="mainFooter">
 		<div class="wrap">
 			<p>Copyright &copy; 2013 <a href="http://navshainc.com">Navsha Computing Inc</a></p>
-			<div class="login-block" id="contact">
-			    <h3>Contact</h3>
-			    <form action="#" method="post" target="_blank">
-		          <input type="text" name="ftp-name" id="ftp-name" placeholder="Your name"/>
-		          <input type="text" name="ftp-email" id="ftp-email" placeholder="Your email" />
-		          <textarea rows="3"  name="ftp-message" id="ftp-message" placeholder="Message"></textarea>
-		          <input type="submit" class="button" value="Send" />
-			    </form>
-			</div>
+                <ul>
+                	<li><img src="img/fb.png"/></li>
+                	<li><img src="img/twit.png"/></li>
+                	<li><img src="img/pinterest.png"/></li>
+                	<li><img src="img/linkedin.png"/></li>
+                </ul>
 		</div>	
 	</footer>
-//   <script type="text/javascript">
-//    $(function() {
-//     var $forms = $("form");
-//     $forms.focusin(function() {
-//         $forms.removeClass("active-form");
-//         $(this).addClass("active-form");
-//     });
-// });
-//   </script>
+  
+  <script type="text/javascript">
+    $(function() {
+     var $forms = $("input");
+     $forms.focusin(function() {
+         $forms.removeClass("active-form");
+        $(this).addClass("active-form");
+       });
+    });
+   </script>
 </body>
 </html>
