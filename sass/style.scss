@@ -144,7 +144,7 @@ a {
 	width: 100%;
 	color: nth($font-color,4);
 	padding: 1%;
-    h2 { display: inline; line-height: 1.3em;}	
+    h2 { float: left; margin: 0;}	
    
     nav{
 		font-size: 1.143em;
@@ -318,19 +318,22 @@ a {
 		img { margin-top: 17%; }
 	}
 
-	.mainHeader nav{ 
-		float: none; 
-		line-height: inherit; 
-		font-size: inherit; 
-		ul { padding: 2% 0;	}
-		li {
-			margin: 0 auto;
-			width: 100%;
-		}
-		a:link {
-			display: inline;
-			padding: 1em 0.6em;
-		}
+	.mainHeader {
+		 h2 { float:none; }
+	    nav{ 
+			float: none; 
+			line-height: inherit; 
+			font-size: inherit; 
+			ul { padding: 2% 0;	}
+			li {
+				margin: 0 auto;
+				width: 100%;
+			}
+			a:link {
+				display: inline;
+				padding: 1em 0.6em;
+			}
+		}	
 	}	
 	
 	.mainContent {

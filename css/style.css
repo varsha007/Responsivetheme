@@ -185,8 +185,8 @@ a img {
 }
 /* line 147, ../sass/style.scss */
 .mainHeader h2 {
-  display: inline;
-  line-height: 1.3em;
+  float: left;
+  margin: 0;
 }
 /* line 149, ../sass/style.scss */
 .mainHeader nav {
@@ -381,42 +381,46 @@ a img {
     margin-top: 17%;
   }
 
-  /* line 321, ../sass/style.scss */
+  /* line 322, ../sass/style.scss */
+  .mainHeader h2 {
+    float: none;
+  }
+  /* line 323, ../sass/style.scss */
   .mainHeader nav {
     float: none;
     line-height: inherit;
     font-size: inherit;
   }
-  /* line 325, ../sass/style.scss */
+  /* line 327, ../sass/style.scss */
   .mainHeader nav ul {
     padding: 2% 0;
   }
-  /* line 326, ../sass/style.scss */
+  /* line 328, ../sass/style.scss */
   .mainHeader nav li {
     margin: 0 auto;
     width: 100%;
   }
-  /* line 330, ../sass/style.scss */
+  /* line 332, ../sass/style.scss */
   .mainHeader nav a:link {
     display: inline;
     padding: 1em 0.6em;
   }
 
-  /* line 336, ../sass/style.scss */
+  /* line 339, ../sass/style.scss */
   .mainContent {
     margin-top: 4%;
     margin-bottom: 5%;
   }
-  /* line 339, ../sass/style.scss */
+  /* line 342, ../sass/style.scss */
   .mainContent .content {
     width: 100%;
     float: none;
   }
-  /* line 342, ../sass/style.scss */
+  /* line 345, ../sass/style.scss */
   .mainContent .content .post-info {
     display: none;
   }
-  /* line 347, ../sass/style.scss */
+  /* line 350, ../sass/style.scss */
   .mainContent .top-sidebar {
     width: 86%;
     float: none;
@@ -425,29 +429,29 @@ a img {
     padding: 1% 7%;
     margin-bottom: 0;
   }
-  /* line 354, ../sass/style.scss */
+  /* line 357, ../sass/style.scss */
   .mainContent .top-sidebar p {
     width: 90%;
   }
-  /* line 357, ../sass/style.scss */
+  /* line 360, ../sass/style.scss */
   .mainContent .login-block {
     width: 86%;
     float: none;
     margin-top: 4%;
   }
-  /* line 363, ../sass/style.scss */
+  /* line 366, ../sass/style.scss */
   .mainContent .login-block form {
     text-align: center;
     width: 75%;
   }
 
-  /* line 370, ../sass/style.scss */
+  /* line 373, ../sass/style.scss */
   .mainFooter {
     width: 100%;
     float: left;
     padding-left: 0;
   }
-  /* line 374, ../sass/style.scss */
+  /* line 377, ../sass/style.scss */
   .mainFooter p {
     width: 86%;
   }
